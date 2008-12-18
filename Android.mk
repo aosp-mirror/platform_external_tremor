@@ -18,7 +18,7 @@ LOCAL_SRC_FILES = \
 
 LOCAL_CFLAGS+= -O2
 
-ifneq ($(TARGET_SIMULATOR),true)
+ifeq ($(TARGET_ARCH),arm)
 LOCAL_CFLAGS+= -D_ARM_ASSEM_
 endif
 	
